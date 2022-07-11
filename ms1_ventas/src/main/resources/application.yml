@@ -1,2 +1,19 @@
 server:
-   port: 8091
+   port: 8092
+
+spring:
+   application:
+      name: ventas-service
+   data:
+      mongo:
+         host: localhost
+         port: 27017
+         uri: mongodb://localhost/hackathon
+
+eureka:
+   client:
+      serviceUrl:
+         defaultZone: http://localhost:8091/eureka/
+   instance:
+      preferIpAddress: true
+      hostName: 192.168.1.10
