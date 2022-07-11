@@ -10,12 +10,16 @@ __Dependencias__
 
 - Eureka Server
 
-__Puerto:__ 8091.
+__Puerto__
+
+8091
 
 ### ms1_ventas
 
-Servicio que registra ventas y provoca la reducción del
-stock de productos.
+__Descripción__
+
+Este servicio registra las ventas teniendo en cuenta un
+producto como una transaccional en base de datos MongoDB.
 
 __Dependencias__
 
