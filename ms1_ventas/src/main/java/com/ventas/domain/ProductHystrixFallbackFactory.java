@@ -7,12 +7,12 @@ public class ProductHystrixFallbackFactory implements ProductClient {
 
 	@Override
 	public Product findById(String id) {
-		Product product = Product.builder()
+		Product product = new Product();
+		return Product.builder()
 				.id(id)
-				.name("")
-				.stock(null)
-				.price(null)
+				.name(product.getName())
+				.stock(product.getStock())
+				.price(product.getPrice())
 				.build();
-		return product;
 	}
 }

@@ -1,13 +1,15 @@
 server:
-   port: 8093
+   port: 8094
 
 spring:
    application:
-      name: compras-service
+      name: stock-service
+   profiles:
+      active: dev
    data:
       mongodb:
          host: localhost
-         port: 27017
+         port: 2017
          uri: mongodb://localhost:27017/hackathon
 
 eureka:

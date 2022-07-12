@@ -8,8 +8,7 @@ spring:
       mongodb:
          host: localhost
          port: 27017
-         uri: mongodb://localhost:27017
-         database: hackathon
+         uri: mongodb://localhost:27017/hackathon
 
 eureka:
    client:
