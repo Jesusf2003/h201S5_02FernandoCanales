@@ -27,7 +27,6 @@ public class VentaController {
 	
 	@GetMapping("/product/{id}")
 	private Product traer(@PathVariable("id") String id) {
-		
 		return this.client.findByProductId(id);
 	}
 	

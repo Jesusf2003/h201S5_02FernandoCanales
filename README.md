@@ -1,6 +1,6 @@
 # h201S5_02FernandoCanales
 
-## Se usó
+## Se utilizó
 ---
 
 - Java SDK 11
@@ -13,42 +13,63 @@
 
 ## Cómo empezar
 
-1. Correr todos los servicios.
+### Registrar productos
 
-2. Registrar productos de prueba
+Guardar compra
 
-    - Enlace
-    
+__URL:__ localhost:8093/compras/save
+
+Buscar producto
+
+__URL:__ localhost:8093/compras/all
+
+Buscar producto por Id
+
+__URL:__ localhost:8093/compras/product/{id}
+
+```json
+{
+    "_id": "1",
+    "name": "Coca Cola",
+    "amount": 20,
+    "price": "2.5"
+},
+{
+    "_id": "2",
+    "name": "Inka Cola",
+    "amount": 20,
+    "price": "2.5"
+},
+{
+  "_id": "3",
+  "name": "Pícaras",
+  "amount": 20,
+  "price": "1.2"
+}
+```
+
+### Registrar Ventas
+
+Registrar venta
+
+__URL:__ localhost:8092/venta/save
+
+Buscar producto desde venta
+
+__URL:__ localhost:8092/venta/product/{id}
+
+Mostrar todas las ventas
+
+__URL:__ localhost:8092/venta/all
+
 ```json
 {
     "id": "1",
-    "name": "Coca Cola",
-    "description": "Bebida gaseosa",
-    "price": 2.50
-},
-{
-    "id": "2",
-    "name": "Inka Cola",
-    "description": "Bebida gaseosa",
-    "price": 2.50
-},
-{
-    "id": "3",
-    "name": "Princesa",
-    "description": "Barra de chocolate",
-    "price": 1.20
-},
-{
-    "id": "4",
-    "name": "Picaras",
-    "description": "Galleta de Vainilla y chocolate",
-    "price": 1
-},
-{
-    "id": "5",
-    "name": "Papas Lays",
-    "description": "Paquete de snacks",
-    "price": 50.0
+    "clientId": "1",
+    "product": {
+        "id": "1"
+    },
+    "status": "SUCCESS"
 }
 ```
 
