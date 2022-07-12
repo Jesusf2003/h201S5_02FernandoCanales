@@ -21,33 +21,33 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/compras")
 public class ProductController {
 
-	private ProductRepository productRepository;
+	private ProductRepository repository;
 	
 	@Autowired
-	private ProductService productService = new ProductService(productRepository);
-
-	@GetMapping("/listProducts")
+	private ProductService service = new ProductService(repository);
+	
+	@GetMapping("/all")
 	public List<Product> findAll() {
-		return productService.findAll();
+		return this.service.findAll();
 	}
-
-	@GetMapping("/{id}")
-	public Product findItemById(@PathVariable String id) {
-		return productService.findItemById(id);
+	
+	@GetMapping("/product/{id}")
+	public Product findCompraById(@PathVariable String id) {
+		return this.service.findProductById(id);
 	}
-
-	@PostMapping
-	public Product saveStudent(@RequestBody Product product) {
-		return productService.create(product);
+	
+	@PostMapping("/save")
+	public Product saveProduct(@RequestBody Product product) {
+		return this.service.create(product);
 	}
-
+	
 	@PutMapping
 	public ResponseEntity<?> update(@RequestBody Product product) {
-		return productService.update(product);
+		return this.service.update(product);
 	}
-
-	@DeleteMapping("/{id}")
+	
+	@DeleteMapping
 	public ResponseEntity<?> delete(@PathVariable String id) {
-		return productService.delete(id);
+		return this.service.delete(id);
 	}
 }

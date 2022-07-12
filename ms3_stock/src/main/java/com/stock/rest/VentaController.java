@@ -1,11 +1,8 @@
-package com.ventas.rest;
+package com.stock.rest;
 
-import java.util.List;
+import com.stock.application.VentaService;
+import com.stock.domain.Venta;
 
-import com.ventas.application.VentaService;
-import com.ventas.domain.Venta;
-
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -20,13 +17,8 @@ public class VentaController {
 
 	private final VentaService service;
 	
-	@PostMapping("/save")
+	@PostMapping
 	private Venta saveVenta(@RequestBody Venta venta) {
-		return service.save(venta);
-	}
-	
-	@GetMapping("/all")
-	public List<Venta> findAll() {
-		return service.findAll();
+		return this.service.save(venta);
 	}
 }

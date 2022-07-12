@@ -13,5 +13,4 @@ public class Ms2ComprasApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(Ms2ComprasApplication.class, args);
 	}
-
 }

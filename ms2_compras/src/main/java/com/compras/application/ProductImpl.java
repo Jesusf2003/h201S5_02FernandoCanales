@@ -1,4 +1,4 @@
-package com.compras.infraestructure;
+package com.compras.application;
 
 import java.util.List;
 
@@ -13,10 +13,10 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public class ProductImpl implements ProductRepository {
-
+	
 	@Autowired
 	private final MongoOperations operations;
-
+	
 	public ProductImpl(MongoOperations operations) {
 		super();
 		this.operations = operations;

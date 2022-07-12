@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class Stock {
 
 	@Id
-	private Long id;
-	private Integer productId;
-	private Integer avalizableQuantity = 0;
+	private String id;
+	private String productId;
+	private Integer cant;
 }
