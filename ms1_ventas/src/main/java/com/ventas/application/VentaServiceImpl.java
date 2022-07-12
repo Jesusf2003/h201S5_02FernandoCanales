@@ -25,14 +25,7 @@ public class VentaServiceImpl implements VentaService {
 	
 	@Override
 	public Venta save(Venta venta) {
-		System.out.println("El id" + venta.getProduct().getId());
-		Optional<Product> opProduct = this.repository.findByProductId(venta.getProduct().getId());
-		if(opProduct.isPresent()) {
-			venta.setProduct(opProduct.get());
-			return repository.save(venta);
-		}
-		System.out.println("No se encontró producto");
-		return null;
+		return repository.save(venta);
 	}
 	
 	@Override
