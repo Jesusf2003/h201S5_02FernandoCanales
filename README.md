@@ -1,5 +1,57 @@
 # h201S5_02FernandoCanales
 
+## Se usó
+---
+
+- Java SDK 11
+
+- Apache Maven 3.4.8
+
+- Spring Boot 2.7.1
+
+- Postman
+
+## Cómo empezar
+
+1. Correr todos los servicios.
+
+2. Registrar productos de prueba
+
+    - Enlace
+    
+```json
+{
+    "id": "1",
+    "name": "Coca Cola",
+    "description": "Bebida gaseosa",
+    "price": 2.50
+},
+{
+    "id": "2",
+    "name": "Inka Cola",
+    "description": "Bebida gaseosa",
+    "price": 2.50
+},
+{
+    "id": "3",
+    "name": "Princesa",
+    "description": "Barra de chocolate",
+    "price": 1.20
+},
+{
+    "id": "4",
+    "name": "Picaras",
+    "description": "Galleta de Vainilla y chocolate",
+    "price": 1
+},
+{
+    "id": "5",
+    "name": "Papas Lays",
+    "description": "Paquete de snacks",
+    "price": 50.0
+}
+```
+
 ## Microservicios
 
 ### Servicio Eureka
@@ -91,14 +143,3 @@ __Nombre:__ MongoDb
 __Tipo:__ No relacional
 
 __Nombre de base de datos:__ hackathon
-
-## Se usó
----
-
-- Java SDK 11
-
-- Apache Maven 3.4.8
-
-- Spring Boot 2.7.1
-
-- Postman

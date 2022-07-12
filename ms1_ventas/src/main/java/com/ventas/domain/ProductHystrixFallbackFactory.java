@@ -6,12 +6,12 @@ import org.springframework.stereotype.Component;
 public class ProductHystrixFallbackFactory implements ProductClient {
 
 	@Override
-	public Product findById(String id) {
+	public Product findByProductId(String id) {
 		Product product = new Product();
 		return Product.builder()
 				.id(id)
 				.name(product.getName())
-				.stock(product.getStock())
+				.amount(product.getAmount())
 				.price(product.getPrice())
 				.build();
 	}

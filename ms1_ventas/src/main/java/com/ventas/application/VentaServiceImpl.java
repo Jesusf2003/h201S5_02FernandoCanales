@@ -1,10 +1,13 @@
 package com.ventas.application;
 
 import java.util.List;
+import java.util.Optional;
 
+import com.ventas.domain.Product;
 import com.ventas.domain.Venta;
 import com.ventas.domain.VentaRepository;
 
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
 
 import lombok.RequiredArgsConstructor;
@@ -19,10 +22,27 @@ public class VentaServiceImpl implements VentaService {
 	public List<Venta> findAll() {
 		return repository.findAll();
 	}
-
+	
 	@Override
 	public Venta save(Venta venta) {
-		return repository.save(venta);
+		System.out.println("El id" + venta.getProduct().getId());
+		Optional<Product> opProduct = this.repository.findByProductId(venta.getProduct().getId());
+		if(opProduct.isPresent()) {
+			venta.setProduct(opProduct.get());
+			return repository.save(venta);
+		}
+		System.out.println("No se encontró producto");
+		return null;
+	}
+	
+	@Override
+	public String getProd(String id) {
+		Optional<Product> opProduct = this.repository.findByProductId(id);
+		if(opProduct.isPresent()) {
+			Product prod = opProduct.get();
+			return prod.toString();
+		}
+		return null;
 	}
 
 	@Override

@@ -6,9 +6,9 @@ import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
-@FeignClient(name = "compras-service", fallback = ProductHystrixFallbackFactory.class)
+@FeignClient(name = "compras-service", url = "localhost:8093", path = "/compras")
 public interface ProductClient {
 
-	@GetMapping(value =  "/compras/{id}")
-	Product findById(@PathVariable String id);
+	@GetMapping(value = "/product/{id}")
+	Product findByProductId(@PathVariable("id") String id);
 }
