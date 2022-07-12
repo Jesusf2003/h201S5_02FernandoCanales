@@ -73,8 +73,6 @@ __GET:__ localhost:8092/venta/all
 }
 ```
 
-### Aumento e incremento de stock
-
 ## Microservicios
 
 ### Servicio Eureka
