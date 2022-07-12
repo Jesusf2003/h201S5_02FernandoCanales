@@ -17,15 +17,15 @@
 
 Guardar compra
 
-__URL:__ localhost:8093/compras/save
+__POST:__ localhost:8093/compras/save
 
 Buscar producto
 
-__URL:__ localhost:8093/compras/all
+__GET:__ localhost:8093/compras/all
 
 Buscar producto por Id
 
-__URL:__ localhost:8093/compras/product/{id}
+__GET:__ localhost:8093/compras/product/{id}
 
 ```json
 {
@@ -52,15 +52,15 @@ __URL:__ localhost:8093/compras/product/{id}
 
 Registrar venta
 
-__URL:__ localhost:8092/venta/save
+__POST:__ localhost:8092/venta/save
 
 Buscar producto desde venta
 
-__URL:__ localhost:8092/venta/product/{id}
+__GET:__ localhost:8092/venta/product/{id}
 
 Mostrar todas las ventas
 
-__URL:__ localhost:8092/venta/all
+__GET:__ localhost:8092/venta/all
 
 ```json
 {
@@ -72,6 +72,8 @@ __URL:__ localhost:8092/venta/all
     "status": "SUCCESS"
 }
 ```
+
+### Aumento e incremento de stock
 
 ## Microservicios
 
