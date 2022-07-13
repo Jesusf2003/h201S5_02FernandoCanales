@@ -14,7 +14,7 @@ public class AprovalController {
     @Autowired
 	private AprovalService cancerService;
 	
-	@PostMapping
+	@PostMapping("/save")
 	public String consultApi(@RequestBody Aproval aproval) {
 		return cancerService.consultApi(aproval);
 	}

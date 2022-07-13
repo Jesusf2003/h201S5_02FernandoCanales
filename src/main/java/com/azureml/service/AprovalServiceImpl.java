@@ -4,8 +4,7 @@ import com.azureml.domain.Aproval;
 
 import org.apache.http.client.fluent.*;
 import org.apache.http.entity.ContentType;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import org.json.simple.*;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -22,6 +21,7 @@ public class AprovalServiceImpl implements AprovalService {
 					.addHeader("Authorization", "Bearer " + API_KEY)
 					.bodyString(data, ContentType.APPLICATION_JSON)
 					.execute().returnContent();
+			System.out.println(content);
 		} catch (Exception e) {
 			System.out.println(e);
 		}

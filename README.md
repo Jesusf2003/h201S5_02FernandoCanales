@@ -2,4 +2,4 @@
 
 __Azure ML - Classification Logistic__
 
-- [Galería de Azure ML (Classic)](https://gallery.azure.ai/Experiment/MachineLearning-Predictive-Exp)
+- [GalerÃ­a de Azure ML (Classic)](https://gallery.azure.ai/Experiment/MachineLearning-Predictive-Exp)
