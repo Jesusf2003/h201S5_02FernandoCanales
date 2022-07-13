@@ -1,17 +1,1 @@
 .project
-
-ms0_eureka/.project
-ms0_eureka/.classpath
-ms0_eureka/.settings
-
-ms1_ventas/.project
-ms1_ventas/.classpath
-ms1_ventas/.settings
-
-ms2_compras/.project
-ms2_compras/.classpath
-ms2_compras/.settings
-
-ms3_stock/.project
-ms3_stock/.classpath
-ms3_stock/.settings
