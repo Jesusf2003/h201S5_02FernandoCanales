@@ -1,0 +1,183 @@
+<nav class="navbar navbar-dark bg-primary">
+  <div id="title" class="container-fluid">
+    <a class="navbar-brand" href="https://github.com/Jesusf2003">
+      <strong>SVM con Azure ML</strong>
+    </a>
+  </div>
+</nav>
+
+<div class="formulario">
+  <div class="title-form">
+    <h2>Complete el siguiente formulario</h2>
+  </div>
+
+  <div class="col-md-12">
+    <form>
+      <div class="row row-cols-4">
+        <div class="col">
+          <label for="column1">
+            <b>Columna 1</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column2">
+            <b>Column 2</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column3">
+            <b>Columna 3</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column4">
+            <b>Columna 4</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <input type="text" id="column1" [(ngModel)]="dto.column1" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="number" id="column2" [(ngModel)]="dto.column2" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="number" id="column3" [(ngModel)]="dto.column3" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="text" id="column4" [(ngModel)]="dto.column4" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <label for="column5">
+            <b>Columna 5</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column6">
+            <b>Columna 6</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column7">
+            <b>Columna 7</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column8">
+            <b>Columna 8</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <input type="text" id="column5" [(ngModel)]="dto.column5" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="text" id="column6" [(ngModel)]="dto.column6" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="text" id="column7" [(ngModel)]="dto.column7" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="number" id="column8" [(ngModel)]="dto.column8" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <label for="column9">
+            <b>Columna 9</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column10">
+            <b>Columna 10</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column11">
+            <b>Columna 11</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column12">
+            <b>Columna 12</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <input type="text" id="column9" [(ngModel)]="dto.column9" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="text" id="column10" [(ngModel)]="dto.column10" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="number" id="column11" [(ngModel)]="dto.column11" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="text" id="column12" [(ngModel)]="dto.column12" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <label for="column13">
+            <b>Columna 13</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column14">
+            <b>Columna 14</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column15">
+            <b>Columna 15</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <label for="column16">
+            <b>Columna 16</b>
+          </label>
+        </div>
+
+        <div class="col">
+          <input type="text" id="column13" [(ngModel)]="dto.column13" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="number" id="column14" [(ngModel)]="dto.column14" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="number" id="column15" [(ngModel)]="dto.column15" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col">
+          <input type="number" id="column16" [(ngModel)]="dto.column16" [ngModelOptions]="{standalone: true}" required>
+        </div>
+
+        <div class="col-aut">
+          <button class="btn btn-primary mb-3" (click)="sendRequest()">Enviar consulta</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
