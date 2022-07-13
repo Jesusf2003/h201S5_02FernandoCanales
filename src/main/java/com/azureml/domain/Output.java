@@ -1,12 +1,14 @@
 package com.azureml.domain;
 
+import java.math.BigDecimal;
+
 import lombok.*;
 
 @Data
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
-public class Aproval {
+public class Output {
 
 	private String column1;
 	private Integer column2;
@@ -24,4 +26,6 @@ public class Aproval {
 	private Integer column14;
 	private Integer column15;
 	private Integer column16;
+	private BigDecimal scored_labels;
+	private BigDecimal scored_probabilities;
 }
