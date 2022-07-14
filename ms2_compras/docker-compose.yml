@@ -1,18 +1,5 @@
 version: "3.8"
 services:
-  mongodb:
-    image : mongo:latest
-    container_name: ventas
-    environment:
-      - PUID=1000
-      - PGID=1000
-    ports:
-      - 27017:27017
-    restart: unless-stopped
-  web:
-    build: .
-    ports:
-      - 8091:8091
   prometheus:
     image: prom/prometheus
     container_name: prometheus
@@ -24,6 +11,9 @@ services:
     image: grafana/grafana
     container_name: grafana
     ports:
-      - 3000:3000
+       - 3000:3000
     env_file:
       - ./env/grafana.env
+networks:
+  my-network:
+    driver: bridge

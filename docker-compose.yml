@@ -1,0 +1,38 @@
+version: "3.8"
+services:
+  eureka:
+    image: eureka-service
+    container_name: eureka-service
+    build: ./ms0_eureka
+    ports:
+      - 8091:8091
+
+  mongodb:
+    image: mongo:latest
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: hackathon
+    ports:
+      - 27017:27107
+
+  ms2-compras:
+    image: compras-service
+    container_name: compras-service
+    command: --smallfiles
+    build:
+      context: ./ms2_compras
+      dockerfile: Dockerfile
+    ports:
+      - 8093:8093
+    depends_on:
+      - mongo_db
+    links:
+      - eureka
+      - mongodb
+    environment:
+      SPRING_APPLICATION_NAME: ms2-compras
+      SPRING_PROFILES_ACTIVE: enableEureka
+      EUREKA_INSTANCE_PREFER_IP_ADDRESS: "true"
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://localhost:8091/eureka
+      SPRING_SLEUTH_ENABLED: "true"
+      SPRING_DATASOURCE_POSTGRESQL_URL: mongodb://mongo_db:27017/hackathon
